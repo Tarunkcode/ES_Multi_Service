@@ -1,0 +1,50 @@
+﻿@keyframes myAnim {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.box {
+    display: block;
+    width: 100px;
+    height: 100px;
+    transition: width 2s, height 2s, background-color 2s, rotate 2s;
+   
+}
+#leftPanel {
+  
+    transition: transform 5s;
+}
+.expand-menu {
+    opacity: 0;
+    /*background-image: linear-gradient(to top-left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 100%);*/
+    animation: fade-in 1s ease-in forwards;
+}
+
+.collapse-menu {
+    animation: fade-out 4s 1s ease-out forwards;
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
